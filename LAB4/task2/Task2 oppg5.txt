@@ -1,0 +1,6 @@
+Task2
+5)
+After implementing the generated RAM IP there is a noticable difference in time when running synthesis and implementasion.
+Opening the floorplaning you see a decrease in blocks used by alot and the schematic is now readable.
+
+There is also a decrease in resources used.

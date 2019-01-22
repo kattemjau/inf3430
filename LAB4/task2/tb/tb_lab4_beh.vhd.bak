@@ -17,7 +17,6 @@ use work.all;
 use work.base_pck.all;
 use work.lab4_tb_pck.all;
 
-
 library work;
 use work.lab4_pck.all;
 
@@ -372,73 +371,58 @@ begin
      writef(tb_lab4_log, cycle_no, "Read value in testbench : " & lv2strx(wvalue,32));
      MC(SINGLE, LAB4REG_RWTEST, x"ABCDEF98");
 
-	 -- Switch to processor register LAB4REG_SETPOINT as setpoint
+     -- Switch to processor register LAB4REG_SETPOINT as setpoint
      sw(7) <= '1';
-	 MW(BYTE, LAB4REG_SETPOINT, "01001010");
-	
-	--testing test registers
-	 
-	 
-     MW(SINGLE, LAB4REG_32, x"FFFFFFFF");  
-     MR(SINGLE, LAB4REG_32, wvalue);    
-     writef(tb_lab4_log, cycle_no, "Read test_value in testbench : " & lv2strx(wvalue,32));
-     MC(SINGLE, LAB4REG_32, x"FFFFFFFF");
-     
-	 
-	 
-     MW(SINGLE, LAB4REG_16,  x"00005111");  
-     MR(SINGLE, LAB4REG_16, wvalue);    
-     writef(tb_lab4_log, cycle_no, "Read test_value in testbench : " & lv2strx(wvalue,32));
-     MC(SINGLE, LAB4REG_16, x"00005111");
+	--MW(BYTE, LAB4REG_SETPOINT, "01001010");
 
      -- <Add register accesses here >
 	 
 	 
 	 -- Example RAM accesses when comments removed:
 
-      MC(SINGLE, LAB4RAM_BASE_ADDRESS, x"DEADBEEF");  -- Reset value in RAM simulation model 
+     -- MC(SINGLE, LAB4RAM_BASE_ADDRESS, x"DEADBEEF");  -- Reset value in RAM simulation model 
      
-     MW(SINGLE, LAB4RAM_BASE_ADDRESS, x"12345678");
-     ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 4);
-     MW(SINGLE, ramaddr, x"87654321");  
-     ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 8);
-     MW(SINGLE, ramaddr, x"ABCDEF98");  
+     --MW(SINGLE, LAB4RAM_BASE_ADDRESS, x"12345678");
+     --ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 4);
+     --MW(SINGLE, ramaddr, x"87654321");  
+     --ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 8);
+     --MW(SINGLE, ramaddr, x"ABCDEF98");  
 
-     MC(SINGLE, LAB4RAM_BASE_ADDRESS, x"12345678");
-     ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 4);
-     MC(SINGLE, ramaddr, x"87654321");  
-     ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 8);
-     MC(SINGLE, ramaddr, x"ABCDEF98");
-
-     
-	 MW(HALFWORD, LAB4RAM_BASE_ADDRESS, x"1234");
-     ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 2);
-     MW(HALFWORD, ramaddr, x"5678");  
-
-     MC(HALFWORD, LAB4RAM_BASE_ADDRESS, x"1234");
-     ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 2);
-     MC(HALFWORD, ramaddr, x"5678");  
-     
-     MC(SINGLE, LAB4RAM_BASE_ADDRESS, x"56781234");
+     --MC(SINGLE, LAB4RAM_BASE_ADDRESS, x"12345678");
+     --ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 4);
+     --MC(SINGLE, ramaddr, x"87654321");  
+     --ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 8);
+     --MC(SINGLE, ramaddr, x"ABCDEF98");
 
      
-     MW(BYTE, LAB4RAM_BASE_ADDRESS, x"01");
-     ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 1);
-     MW(BYTE, ramaddr, x"02");  
-     ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 2);
-     MW(BYTE, ramaddr, x"03");  
-     ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 3);
-     MW(BYTE, ramaddr, x"04");  
+	 --MW(HALFWORD, LAB4RAM_BASE_ADDRESS, x"1234");
+     --ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 2);
+     --MW(HALFWORD, ramaddr, x"5678");  
 
-     MC(BYTE, LAB4RAM_BASE_ADDRESS, x"01");
-     ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 1);
-     MC(BYTE, ramaddr, x"02");  
-     ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 2);
-     MC(BYTE, ramaddr, x"03");  
-     ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 3);
-     MC(BYTE, ramaddr, x"04");  
+     --MC(HALFWORD, LAB4RAM_BASE_ADDRESS, x"1234");
+     --ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 2);
+     --MC(HALFWORD, ramaddr, x"5678");  
      
-     MC(SINGLE, LAB4RAM_BASE_ADDRESS, x"04030201");
+     --MC(SINGLE, LAB4RAM_BASE_ADDRESS, x"56781234");
+
+     
+     --MW(BYTE, LAB4RAM_BASE_ADDRESS, x"01");
+     --ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 1);
+     --MW(BYTE, ramaddr, x"02");  
+     --ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 2);
+     --MW(BYTE, ramaddr, x"03");  
+     --ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 3);
+     --MW(BYTE, ramaddr, x"04");  
+
+     --MC(BYTE, LAB4RAM_BASE_ADDRESS, x"01");
+     --ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 1);
+     --MC(BYTE, ramaddr, x"02");  
+     --ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 2);
+     --MC(BYTE, ramaddr, x"03");  
+     --ramaddr:= std_logic_vector(unsigned(LAB4RAM_BASE_ADDRESS) + 3);
+     --MC(BYTE, ramaddr, x"04");  
+     
+     --MC(SINGLE, LAB4RAM_BASE_ADDRESS, x"04030201");
 
 	 
      Tcycle(100000); -- Run to let the position signals from motor model change ...

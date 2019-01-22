@@ -406,3 +406,4 @@ set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 13]]
 ## Design Properties Constraints ##
 ###################################
 
+#create_generated_clock -name {pos_seq7_ctrl_0/O2/clkdiv_0/mclk_cnt_reg[6]/Q} -source {get_ports mclk} -multiply_by 1 [get_pins {pos_seq7_ctrl_0/O2/clkdiv_0/mclk_cnt_reg[6]/Q}]

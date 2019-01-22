@@ -20,6 +20,9 @@ architecture rtl of lab4_reg is
   -- Internal registers
   signal rwtest_i       : std_logic_vector(31 downto 0);
   signal setpoint_i     : std_logic_vector(7 downto 0);
+  
+  signal test_32		: std_logic_vector(31 downto 0);
+  signal test_16		: std_logic_vector(15 downto 0);
 
 begin
   
@@ -43,6 +46,8 @@ begin
           regwrack_2pif  <= '0';
           rwtest_i       <= (others => '0');
           setpoint_i     <= (others => '0');
+		  test_32 <= (others => '0');
+		  test_16 <= (others => '0');
          
       elsif rising_edge(pif_clk) then
 
@@ -57,6 +62,13 @@ begin
           if pif_be(0)='1' then
             if pif_addr(15 downto 2) = LAB4REG_RWTEST(15 downto 2) then
               rwtest_i(7 downto 0) <=  pif_wdata(7 downto 0);
+			 end if;
+			if pif_addr(15 downto 2) = LAB4REG_32(15 downto 2) then
+				test_32 (7 downto 0) <=  pif_wdata(7 downto 0);
+				 end if;
+			if pif_addr(15 downto 2) = LAB4REG_16(15 downto 2) then
+				test_16 (7 downto 0) <=  pif_wdata(7 downto 0);
+				
             end if;
             if pif_addr(15 downto 2) = LAB4REG_SETPOINT(15 downto 2) then
               setpoint_i(7 downto 0) <=  pif_wdata(7 downto 0);
@@ -65,41 +77,61 @@ begin
           
           if pif_be(1)='1' then
             if pif_addr(15 downto 2) = LAB4REG_RWTEST(15 downto 2) then
-              rwtest_i(15 downto 8) <=  pif_wdata(15 downto 8);
+				rwtest_i(15 downto 8) <=  pif_wdata(15 downto 8);
+				 end if;
+			if pif_addr(15 downto 2) = LAB4REG_32(15 downto 2) then
+				test_32 (15 downto 8) <=  pif_wdata(15 downto 8);
+			 end if;
+			if pif_addr(15 downto 2) = LAB4REG_16(15 downto 2) then
+				test_16 (15 downto 8) <=  pif_wdata(15 downto 8);
             end if;
           end if;
           
           if pif_be(2)='1' then
             if pif_addr(15 downto 2) = LAB4REG_RWTEST(15 downto 2) then
               rwtest_i(23 downto 16) <=  pif_wdata(23 downto 16);
+			 end if;
+			if pif_addr(15 downto 2) = LAB4REG_32(15 downto 2) then
+				test_32 (23 downto 16) <=  pif_wdata(23 downto 16);
             end if;
           end if;
           
           if pif_be(3)='1' then
             if pif_addr(15 downto 2) = LAB4REG_RWTEST(15 downto 2) then
               rwtest_i(31 downto 24) <=  pif_wdata(31 downto 24);
+			 end if;
+			if pif_addr(15 downto 2) = LAB4REG_32(15 downto 2) then
+				test_32 (31 downto 24) <=  pif_wdata(31 downto 24);
             end if;
-          end if;
+          end if;	
           
         elsif (pif_regcs_s2='0') then
           regwrack_2pif <= '0';
         end if;
       end if;
+	  
       
   end process; 
 
 
   -- Combinational memory mapped register read logic
   P_READ: process (pif_regcs_s2, pif_re, pif_addr,
-                   rwtest_i, setpoint_i)
+                   rwtest_i, setpoint_i, test_32, test_16)
     begin
       -- Address decoding for reading registers
       if ( pif_regcs_s2='1' and pif_re(0)='1' ) then
 
-	reg_data_out  <= (others => '0');
+		reg_data_out  <= (others => '0');
 
         if pif_addr(15 downto 2) = LAB4REG_RWTEST(15 downto 2) then
           reg_data_out <= rwtest_i;
+        end if;
+		
+		if pif_addr(15 downto 2) = LAB4REG_32(15 downto 2) then
+          reg_data_out <= test_32;
+        end if;
+		 if pif_addr(15 downto 2) = LAB4REG_16(15 downto 2) then
+          reg_data_out(15 downto 0) <= test_16;
         end if;
   
         if pif_addr(15 downto 2) = LAB4REG_SETPOINT(15 downto 2) then

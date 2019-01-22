@@ -35,5 +35,8 @@ package lab4_pck is
   constant LAB4REG_RWTEST                    : std_logic_vector(31 downto 0) := x"4000000C";  -- RW U32,32
   
   constant LAB4REG_SETPOINT                  : std_logic_vector(31 downto 0) := x"40000010";  -- RW U8,8
-
+  
+  constant LAB4REG_32						 : std_logic_vector(31 downto 0) := x"40000014";  -- test 32
+  constant LAB4REG_16						 : std_logic_vector(31 downto 0) := x"40000018";  -- test 16
+  
 end lab4_pck;

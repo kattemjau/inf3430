@@ -5,6 +5,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 library work;
 use work.lab4_pck.all;
 
+
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
@@ -19,7 +20,7 @@ architecture str of lab4_top is
 -- START ADDING COMPONENT
 
 -- COMPONENT PS + AXI INTERCONNECT
-  component lab4processor is
+   component design_1_wrapper is
     port (
       ACLK              : out   STD_LOGIC;
       ARESET            : out   STD_LOGIC_VECTOR (0 to 0);
@@ -172,16 +173,16 @@ component pos_seg7_ctrl is
     );
 end component;
 
---component ram_lab4
---  port (
---    clka  : in  STD_LOGIC;
---    rsta  : in  STD_LOGIC;
---    ena   : in  STD_LOGIC;
---    wea   : in  STD_LOGIC_VECTOR (3 downto 0);
---    addra : in  STD_LOGIC_VECTOR (9 downto 0);
---    dina  : in  STD_LOGIC_VECTOR (31 downto 0);
---    douta : out STD_LOGIC_VECTOR (31 downto 0));
---end component;
+component ram_lab4
+  port (
+    clka  : in  STD_LOGIC;
+    rsta  : in  STD_LOGIC;
+    ena   : in  STD_LOGIC;
+    wea   : in  STD_LOGIC_VECTOR (3 downto 0);
+    addra : in  STD_LOGIC_VECTOR (9 downto 0);
+    dina  : in  STD_LOGIC_VECTOR (31 downto 0);
+    douta : out STD_LOGIC_VECTOR (31 downto 0));
+end component;
 
 -- SIGNALS
 
@@ -235,7 +236,7 @@ begin
 
   -- PORT MAP PS + AXI INTERCONNECT
 
-  lab4processor_0: lab4processor
+lab4processor_0: design_1_wrapper
     port map (
       ACLK              => aclk,
       ARESET            => pifb_axi_aresetn,
@@ -360,16 +361,16 @@ begin
         ack_2pif    => ack_lab4reg2pif
     );
 
-  -- Instantiation of ram module
-  --ram_lab4_0: ram_lab4
-  --  port map (
-  --    clka  => pif_clk,
-  --    rsta  => pif_rst,
-  --    ena   => pif_memcs(0),
-  --    wea   => pif_be,
-  --    addra => pif_addr(11 downto 2), -- Word adressing; removing (2 lsb) byte address bits.
-  --    dina  => pif_wdata,
-  --    douta => mdata_lab4ram2pif);
+   --Instantiation of ram module
+  ram_lab4_0: ram_lab4
+    port map (
+      clka  => pif_clk,
+      rsta  => pif_rst,
+      ena   => pif_memcs(0),
+      wea   => pif_be,
+      addra => pif_addr(11 downto 2), -- Word adressing; removing (2 lsb) byte address bits.
+      dina  => pif_wdata,
+      douta => mdata_lab4ram2pif);
 
   pos_seq7_ctrl_0: pos_seg7_ctrl
     port map (

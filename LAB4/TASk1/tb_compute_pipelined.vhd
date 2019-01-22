@@ -38,7 +38,7 @@ architecture beh of tb_compute_pipelined is
   
 begin
   
-  compute_pipelined_0: compute_pipelined
+  compute_pipelined_0: entity work.compute_pipelined	
     port map (
       rst    => rst,
       clk    => clk,
@@ -98,9 +98,9 @@ begin
     c <= x"0307";
     d <= x"0408";
     e <= x"0509";
-    dvalid <= '1';
+    dvalid <= '1'; -- endre til 1
 
-    wait for 20 ns;
+    wait for 20 ns; --10ns clk updates
 
     a <= x"FFFF";
     b <= x"0000";
