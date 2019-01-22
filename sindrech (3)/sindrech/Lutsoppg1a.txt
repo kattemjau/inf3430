@@ -1,0 +1,14 @@
++-------------------------+------+-------+-----------+-------+
+|        Site Type        | Used | Fixed | Available | Util% |
++-------------------------+------+-------+-----------+-------+
+| Slice LUTs*             |    8 |     0 |     53200 |  0.02 |
+|   LUT as Logic          |    8 |     0 |     53200 |  0.02 |
+|   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
+| Slice Registers         |    1 |     0 |    106400 | <0.01 |
+|   Register as Flip Flop |    1 |     0 |    106400 | <0.01 |
+|   Register as Latch     |    0 |     0 |    106400 |  0.00 |
+| F7 Muxes                |    0 |     0 |     26600 |  0.00 |
+| F8 Muxes                |    0 |     0 |     13300 |  0.00 |
++-------------------------+------+-------+-----------+-------+
+
+In the schematic vuiew under RTL, it reports as it uses 47 cells, 35 IO ports and 81 nets

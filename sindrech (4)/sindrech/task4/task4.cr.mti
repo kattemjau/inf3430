@@ -1,0 +1,43 @@
+C:/H2018INF3430/Lab1/task4/shift8.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/H2018INF3430/Lab1/task4/shift8.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity shift8
+-- Compiling architecture Behavioral of shift8
+
+} {} {}} C:/H2018INF3430/Lab1/task4/tb_shift.vhd {2 {vcom -work work -2002 -explicit -vopt -stats=none {C:\H2018INF3430\Lab1\task4\tb_shift.vhd}
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_shift
+-- Compiling architecture Behavioral of tb_shift
+** Warning: C:\H2018INF3430\Lab1\task4\tb_shift.vhd(67): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: C:\H2018INF3430\Lab1\task4\tb_shift.vhd(67): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+
+} {} {}} C:/H2018INF3430/Lab1/task4/shift32.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/H2018INF3430/Lab1/task4/shift32.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity shift32
+-- Compiling architecture Behavioral of shift32
+
+} {} {}} C:/H2018INF3430/Lab1/task4/shiftn.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/H2018INF3430/Lab1/task4/shiftn.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity shiftn
+-- Compiling architecture Behavioral of shiftn
+
+} {} {}} C:/H2018INF3430/Lab1/task4/dff.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/H2018INF3430/Lab1/task4/dff.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity dff
+-- Compiling architecture rtl of dff
+
+} {} {}}

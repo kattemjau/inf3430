@@ -1,0 +1,208 @@
+C:/Inf3430/Lab3/pos_ctrl.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/pos_ctrl.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling architecture pos_ctrl of pos_ctrl
+-- Loading entity pos_ctrl
+-- Loading entity pos_meas
+-- Loading entity p_ctrl
+
+} {} {}} C:/Inf3430/Lab3/motor_ent.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/motor_ent.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity motor
+
+} {} {}} C:/Inf3430/Lab3/motor_beh.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/motor_beh.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling architecture motor_beh of motor
+-- Loading entity motor
+
+} {} {}} C:/Inf3430/Lab3/subprog_pck.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/subprog_pck.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package subprog_pck
+-- Compiling package body subprog_pck
+-- Loading package subprog_pck
+
+} {} {}} C:/Inf3430/Lab3/rstsynch_rtl.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/rstsynch_rtl.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling architecture dav of rstsynch
+-- Loading entity rstsynch
+
+} {} {}} C:/Inf3430/Lab3/tb_pos.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/tb_pos.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity tb
+-- Compiling architecture tb_pos of tb
+-- Loading entity pos_meas
+
+} {} {}} C:/Inf3430/Lab3/pos_seg7_ctrl_ent.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/pos_seg7_ctrl_ent.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity pos_seg7_ctrl
+
+} {} {}} C:/Inf3430/Lab3/tb_ctrl.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/tb_ctrl.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity tb
+-- Compiling architecture tb_ctrl of tb
+-- Loading entity p_ctrl
+
+} {} {}} C:/Inf3430/Lab3/p_ctrl_ent.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/p_ctrl_ent.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity p_ctrl
+
+} {} {}} C:/Inf3430/Lab3/pos_seg7_ctrl.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/pos_seg7_ctrl.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling architecture pos_seg7_ctrl of pos_seg7_ctrl
+-- Loading entity pos_seg7_ctrl
+-- Loading entity cru
+-- Loading entity pos_ctrl
+-- Loading package subprog_pck
+-- Loading entity seg7ctrl
+
+} {} {}} C:/Inf3430/Lab3/cru_rtl.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/cru_rtl.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling architecture beh of cru
+-- Loading package NUMERIC_STD
+-- Loading entity cru
+
+} {} {}} C:/Inf3430/Lab3/p_ctrl.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/p_ctrl.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling architecture pos_ctrl of p_ctrl
+-- Loading entity p_ctrl
+
+} {} {}} C:/Inf3430/Lab3/tb_pos_seg7.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/tb_pos_seg7.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity tb
+-- Compiling architecture tb_pos_seg7 of tb
+-- Loading entity seg7model
+-- Loading entity motor
+-- Loading entity pos_seg7_ctrl
+
+} {} {}} C:/Inf3430/Lab3/rstsynch_ent.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/rstsynch_ent.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity rstsynch
+
+} {} {}} C:/Inf3430/Lab3/tb_full_pos_ctrl.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none {C:\Inf3430\Lab3\tb_full_pos_ctrl.vhd}
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity tb
+-- Compiling architecture tb_full of tb
+-- Loading entity pos_ctrl
+-- Loading entity motor
+
+} {} {}} C:/Inf3430/Lab3/pos_meas_beh.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/pos_meas_beh.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling architecture pos_beh of pos_meas
+-- Loading entity pos_meas
+
+} {} {}} C:/Inf3430/Lab3/seg7model_beh.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/seg7model_beh.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling architecture beh of seg7model
+-- Loading entity seg7model
+
+} {} {}} C:/Inf3430/Lab3/seg7model_ent.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/seg7model_ent.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity seg7model
+
+} {} {}} C:/Inf3430/Lab3/pos_meas_ent.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/pos_meas_ent.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity pos_meas
+
+} {} {}} C:/Inf3430/Lab3/clkdiv_rtl.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/clkdiv_rtl.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling architecture dav of clkdiv
+-- Loading entity clkdiv
+
+} {} {}} C:/Inf3430/Lab3/cru_ent.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/cru_ent.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity cru
+
+} {} {}} C:/Inf3430/Lab3/clkdiv_ent.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/clkdiv_ent.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity clkdiv
+
+} {} {}} C:/Inf3430/Lab3/pos_ctrl_ent.vhd {1 {vcom -work work -2008 -explicit -vopt -stats=none C:/Inf3430/Lab3/pos_ctrl_ent.vhd
+QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity pos_ctrl
+
+} {} {}}

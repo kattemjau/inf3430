@@ -1,0 +1,23 @@
+A)
+In tb_delay the mclk changes after 45*10^7 fs. The master clock updates every 50ns, is a square wave that switches between low and high.
+The reset pin is reset after 100ns, and the input is present after 200ns.
+50ns after input is present, you find data1, and 100ns later you get data3, 100ns later you get data5 and outdata.
+
+The <= operator assigns the value at the next time step, and since data1 gets its data from indata at the first clock cycle, data3 needs to wait one more cycle after data1 is updated.
+This is the same for data5, that is dependend on data3 to update before it can get its value. Outdata gets its data from data5.
+The delay is created by using data2 and data4 as variables that needs the prev value to be set in order to update. The := operator sets the variables instant.
+
+
+B)
+the output data is equal to "UUUUUUUU" at time 50 ns beacuse it is not reset, and not assigned anny value. this is to indicate that the gate values are at random.
+When reset is back to '0', the output stayed at "00000000". 3 clock periodes after the 300ns mark, and changed again 3 clock periodes after the 400ns mark til the input values.
+
+C) 
+Both output(7 downto 6) and output(3 downto 2) takes 2 bit from a decided position. Eg. output(7 downto 6) <= "10" will put 1 on position 7 and 0 on pos 6.
+In this example both output(7 downto 6) and output(3 downto 2) is dependent on sig2 & sig1. Since they will not update theyr value before the next clock tick, they will keep the value.
+Pos 7 and 6 will be indentical with pos 3 and 2. 
+output(1 downto 0) and output(5 downto 4) is based on variables var2 and var1. Since they are variables theyr value instant updates, making them the oposites of eatchother.
+
+D)
+the first 100ns gives both pos 7,6 and 3,2 the value U. This is beacuse it takes one clock tick to update the value.
+Now since the program dosent update when sig1 and sig2 updates, they are flipped from task C).
